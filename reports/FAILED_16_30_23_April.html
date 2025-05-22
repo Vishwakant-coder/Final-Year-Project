@@ -1,0 +1,81 @@
+
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Failed to Apply Report</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        margin: 20px;
+                    }
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        margin-bottom: 20px;
+                    }
+                    table, th, td {
+                        border: thin solid #e0e0e0;
+                    }
+                    th, td {
+                        padding: 12px;
+                        text-align: left;
+                    }
+                    th {
+                        background-color: #3b3041ed;
+                        color: white;
+                    }
+                    tr:nth-child(even) {
+                        background-color: #f2f2f2;
+                    }
+                    .cover-letter {
+                        position: relative;
+                    }
+                    .cover-letter button {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        background: none;
+                        border: none;
+                        color: blue;
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                </style>
+                <script>
+                    function toggleCoverLetter(button) {
+                        var fullText = button.previousElementSibling;
+                        var shortText = fullText.previousElementSibling;
+                        if (fullText.style.display === "none") {
+                            fullText.style.display = "inline";
+                            shortText.style.display = "none";
+                            button.textContent = "Read Less";
+                        } else {
+                            fullText.style.display = "none";
+                            shortText.style.display = "inline";
+                            button.textContent = "Read More";
+                        }
+                    }
+                </script>
+            </head>
+            <body>
+               <h1>Failed to Apply Report </h1> <h3><a href="https://github.com/Eviltr0N/internshala-bot"> by Internshala_bot </a></h3>
+                <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Sr. No</th>
+      <th>Profile</th>
+      <th>Company</th>
+      <th>Skills</th>
+      <th>Reason</th>
+      <th>Cover Letter</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+            </body>
+            </html>
+
+            
