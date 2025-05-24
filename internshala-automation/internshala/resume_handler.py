@@ -56,51 +56,6 @@ except:
     Projects = "No projects specified assume accordingly"
 
 
-#======================================================================
-
-# def cover_letter_prompt_format(profile, company, about, skills, int_or_job):
-#     prompt=f'''
-# I want you to write a cover letter for a {int_or_job}, \
-# I will provide you The {int_or_job} description, their skill requirements. \
-# I will also give you my skills, my certifications, my projects. \
-# You have to understand the {int_or_job} description and my whole portfolio then mention \
-# key things from my portfolio that are relavent to the {int_or_job} description. \
-# Keep cover letter simple but effective. \
-# Use general Indian english so it looks like its written by human. \
-# Below My skills, certifications, projects and {int_or_job} description, their skill requirements are attached. \
-# Dont use email formatting as I am not sending this in an email. \
-# Also Don't include header(such as Dear Hiring Manager... etc) and footer(such as Sincerly...etc). \
-# If my skill set lacks any of their skill requirement then assume that I possess that skill too. \
-
-
-# My Skills
-# ```
-# {Skills}
-# ```
-# Certifications
-# ```
-# {Certifications}
-# ```
-# My Projects
-# ```
-# {Projects}
-# ```
-
-# {int_or_job} Description
-# ```
-# {profile}
-
-# {about}
-
-# Skills Required
-# {skills}
-# ```
-# Company Name: {company}
-
-# Important - The letter must be less than 2000 characters.
-# '''
-#     return prompt
-
 #====================================================================
 
 def assignment_prompt_format(profile, company, about, skills, question, int_or_job):

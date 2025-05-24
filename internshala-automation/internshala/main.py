@@ -144,11 +144,6 @@ class internshala:
                 raise Exception("Apply button not found!")
 
             apply_button.click()
-            # try:
-            #     self.page.wait_for_selector("#cover_letter_holder", timeout=5000, state="visible")
-            # except:
-            #     print("Cover letter section not found. Proceeding without it.")
-            # return False
         self.page.context.storage_state(path=self.intern_state_conf)
 
     def fill_app_form(self, GPT, success, failed, validate_assignment_question):
@@ -157,17 +152,6 @@ class internshala:
         checkbox_selector = 'input[name="location_single"]'
         if self.page.is_visible(checkbox_selector):
             self.page.check(checkbox_selector)
-
-        # try:
-        #     self.cover = GPT.get_cover_letter(self.profile, self.company, self.about, self.skills, self.is_int_or_job)
-        #     cover_letter_area = self.page.locator('#cover_letter')
-        #     if cover_letter_area.is_visible():
-        #         cover_letter_area.fill(self.cover)
-        # except Exception as e:
-        #     print("[bold yellow]Skipping cover letter due to error:[/]", str(e))
-        #     self.cover = ""
-
-
         assignments = self.page.locator('.form-group.additional_question')
         count = assignments.count()
         print('Total assignments: ', f'[bold green]{count}[/]\n')
@@ -357,7 +341,7 @@ def main():
             else:
                 print("[bold red]Invalid url: [/]", url)
     else:
-        int_or_job = urls[0].split("/")[3] # Checks if its job or internship
+        int_or_job = urls[0].split("/")[3] # Checks if its internship
         if urls[0].find(f"internshala.com/{int_or_job}/detail") != -1 or urls[0].find(f"internshala.com/{int_or_job}/details") != -1:
             links.append(urls[0])
         elif urls[0].find(f"internshala.com/{int_or_job}/") != -1:
